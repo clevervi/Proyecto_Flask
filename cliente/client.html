@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kiosko Digital - Pasa bocas, gaseosas, dulces y más para tu consumo diario">
+    <title>MEVB - Productos de consumo rápido</title>
+    <link rel="stylesheet" href="../main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="client-body">
+    <header class="client-header">
+        <div class="header-content">
+            <div class="logo">
+                <h1><a href="#">MEVB</a></h1>
+                <p class="tagline">Tu Tienda de Confianza</p>
+            </div>
+            <div class="user-actions">
+                <div class="search-box input-with-icon">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Buscar productos...">
+                </div>
+                <a href="#" id="cart-btn" class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+                <div class="auth-buttons">
+                    <a href="#" id="login-btn" class="btn btn-outline">Iniciar Sesión</a>
+                    <a href="#" id="register-btn" class="btn btn-primary">Registrarse</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav class="client-nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><a href="#"><i class="fas fa-cookie"></i> Pasa Bocas</a></li>
+                <li><a href="#"><i class="fas fa-wine-bottle"></i> Bebidas</a></li>
+                <li><a href="#"><i class="fas fa-candy-cane"></i> Dulces</a></li>
+                <li><a href="#"><i class="fas fa-tag"></i> Ofertas</a></li>
+                <li><a href="#"><i class="fas fa-phone"></i> Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="client-main">
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h2>Bienvenido a MEVB</h2>
+                <p>Los mejores pasa bocas, gaseosas y productos de consumo rápido</p>
+                <a href="#" class="login-button">Ver productos</a>
+            </div>
+        </section>
+        
+        <section class="products-section">
+            <div class="section-header">
+                <h2>Nuestros Productos</h2>
+                <div class="sort-options input-with-icon">
+                    <i class="fas fa-sort"></i>
+                    <select id="sort-products">
+                        <option value="default">Ordenar por</option>
+                        <option value="price-asc">Precio: menor a mayor</option>
+                        <option value="price-desc">Precio: mayor a menor</option>
+                        <option value="name-asc">Nombre: A-Z</option>
+                        <option value="name-desc">Nombre: Z-A</option>
+                    </select>
+                </div>
+            </div>
+            <div class="product-grid" id="product-grid">
+                <!-- Productos se cargarán aquí con JavaScript -->
+            </div>
+            <div class="pagination">
+                <button class="btn btn-outline"><i class="fas fa-chevron-left"></i></button>
+                <span>1 de 3</span>
+                <button class="btn btn-outline"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+        
+        <section class="promotions-section">
+            <h2>Promociones Especiales</h2>
+            <div class="promotions-grid">
+                <div class="promotion-card login-container">
+                    <h3>Combo 1</h3>
+                    <p>Gaseosa + Papas Fritas</p>
+                    <span class="promo-price">$3.00</span>
+                    <button class="login-button">Añadir al carrito</button>
+                </div>
+                <div class="promotion-card login-container">
+                    <h3>Combo 2</h3>
+                    <p>Jugo + Barra de cereal</p>
+                    <span class="promo-price">$2.00</span>
+                    <button class="login-button">Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="client-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MEVB</h3>
+                <p>Tu tienda de confianza con los mejores productos de consumo.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Horario</h3>
+                <ul>
+                    <li>Lunes-Viernes: 8am-10pm</li>
+                    <li>Sábados: 9am-11pm</li>
+                    <li>Domingos: 10am-9pm</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Local 5</p>
+                <p><i class="fas fa-phone"></i> +1 234 567 890</p>
+                <p><i class="fas fa-envelope"></i> contacto@MEVB.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MEVB. Todos los derechos reservados.</p>
+            <div class="payment-methods">
+                <i class="fas fa-money-bill-wave"></i>
+                <i class="fas fa-coins"></i>
+                <i class="fab fa-cc-visa"></i>
+                <i class="fab fa-cc-mastercard"></i>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modales -->
+    <div class="modal" id="login-modal">
+        <div class="modal-content login-container">
+            <span class="close">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" placeholder="tu@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                </div>
+                <button type="submit" class="login-button">Ingresar</button>
+                <div class="form-footer">
+                    <p>¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal" id="register-modal">
+        <div class="modal-content login-container">
+            <span class="close">&times;</span>
+            <h2>Registrarse</h2>
+            <form id="register-form" class="login-form">
+                <div class="form-group">
+                    <label for="reg-name">Nombre completo</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="reg-name" placeholder="Tu nombre" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-email">Correo electrónico</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="reg-email" placeholder="tu@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-password">Contraseña</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="reg-password" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="reg-confirm-password">Confirmar contraseña</label>
+                    <div class="input-with-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="reg-confirm-password" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <button type="submit" class="login-button">Registrarse</button>
+                <div class="form-footer">
+                    <p>¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal" id="cart-modal">
+        <div class="modal-content login-container">
+            <span class="close">&times;</span>
+            <h2>Tu Carrito</h2>
+            <div id="cart-items">
+                <!-- Ítems del carrito se cargarán aquí -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <p>Subtotal: <span>$<span id="cart-subtotal">0.00</span></span></p>
+                    <p>Envío: <span>$<span id="cart-shipping">0.00</span></span></p>
+                    <p class="total">Total: <span>$<span id="cart-total">0.00</span></span></p>
+                </div>
+                <button id="checkout-btn" class="login-button">Finalizar Compra</button>
+                <a href="#" class="continue-shopping">Seguir comprando</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="toast" id="toast"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
